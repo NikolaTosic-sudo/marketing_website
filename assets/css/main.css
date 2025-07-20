@@ -2935,6 +2935,227 @@ body {
 		background-attachment: scroll;
 	}
 
+	.slideshow {
+		padding: 5em 12em;
+		position: relative;
+	}
+
+		.slideshow article {
+			-moz-transform: translateY(0.5em);
+			-webkit-transform: translateY(0.5em);
+			-ms-transform: translateY(0.5em);
+			transform: translateY(0.5em);
+			-moz-transition: all 0.35s ease-in-out;
+			-webkit-transition: all 0.35s ease-in-out;
+			-ms-transition: all 0.35s ease-in-out;
+			transition: all 0.35s ease-in-out;
+			background-color: #ffffff;
+			box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.1);
+			margin: 0 auto;
+			opacity: 0;
+			visibility: hidden;
+		}
+		
+		.slideshow article.visible {
+				-moz-transform: translateY(0);
+				-webkit-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+				opacity: 1;
+				visibility: visible;
+				width: 80%;
+				margin: auto;
+			}
+
+			.slideshow article .image {
+				border-radius: 0;
+				height: 32em;
+				width: 100%;
+			}
+
+				.slideshow article .image img {
+					border-radius: 0;
+					display: block;
+					height: 100%;
+					width: 100%;
+				}
+
+			.slideshow article .content {
+				padding: 2.5em 5em 1.5em 5em;
+				text-align: center;
+			}
+
+		.slideshow nav a {
+			text-decoration: none;
+			-moz-transition: opacity 0.2s ease-in-out;
+			-webkit-transition: opacity 0.2s ease-in-out;
+			-ms-transition: opacity 0.2s ease-in-out;
+			transition: opacity 0.2s ease-in-out;
+			height: 100%;
+			opacity: 0.325;
+			position: absolute;
+			top: 0;
+			width: 12em;
+		}
+
+			.slideshow nav a:before {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				display: inline-block;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				line-height: 1;
+				text-transform: none !important;
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 400;
+			}
+
+			.slideshow nav a .label {
+				display: none;
+			}
+
+			.slideshow nav a:before {
+				display: block;
+				font-size: 5em;
+				height: 2em;
+				left: 50%;
+				line-height: 2em;
+				margin: -1em 0 0 -1em;
+				position: absolute;
+				text-align: center;
+				top: 50%;
+				width: 2em;
+			}
+
+			.slideshow nav a.previous {
+				left: 0;
+			}
+
+				.slideshow nav a.previous:before {
+					content: '\f104';
+					font-weight: 900;
+				}
+
+			.slideshow nav a.next {
+				right: 0;
+			}
+
+				.slideshow nav a.next:before {
+					content: '\f105';
+					font-weight: 900;
+				}
+
+			.slideshow nav a:hover {
+				opacity: 1;
+			}
+
+		.slideshow.accent1 {
+			background-attachment: scroll, fixed;
+			background-image: url("images/overlay.png"), url("../../images/banner.jpg");
+			background-position: center center;
+			background-size: cover;
+		}
+
+			.slideshow.accent1 nav a {
+				color: #ffffff;
+			}
+
+		.slideshow.accent2 {
+			background-color: #4cabb1;
+		}
+
+			.slideshow.accent2 nav a {
+				color: #ffffff;
+			}
+
+		.slideshow.accent3 {
+			background-color: #69c7ad;
+		}
+
+			.slideshow.accent3 nav a {
+				color: #ffffff;
+			}
+
+		.slideshow.accent4 {
+			background-color: #fed586;
+		}
+
+			.slideshow.accent4 nav a {
+				color: #ffffff;
+			}
+
+		@media screen and (max-width: 1680px) {
+
+			.slideshow article .content {
+					padding: 1em 5em 0.5em 5em;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.slideshow {
+				padding: 5em 5em;
+			}
+
+				.slideshow nav a {
+					width: 5em;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.slideshow {
+				padding: 2em;
+			}
+
+					.slideshow article {
+						margin-top: 0;
+					}
+
+					.slideshow article .image {
+						height: 13em;
+					}
+
+					.slideshow nav a:before {
+						font-size: 3em;
+					}
+
+					.slideshow article .content {
+						padding: 2px;
+						height: 20px;
+						h3 {
+							line-height: 12px;
+							font-size: 12px;
+							margin-bottom: 0;
+						}
+					}
+
+				/* .slideshow nav {
+					display: none;
+				} */
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			.slideshow {
+				padding: 1.5em;
+			}
+
+				.slideshow article {
+					margin: 0;
+				}
+
+					.slideshow article .image {
+						height: 9em;
+					}
+
+		}
+
+
 /* Main */
 
 	#main {
@@ -3393,10 +3614,6 @@ body {
 	@media screen and (max-width: 980px) {
 
 		/* Feature */
-
-			.feature {
-				text-align: center;
-			}
 
 				.feature .image {
 					margin: 0 auto 4em auto;
