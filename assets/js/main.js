@@ -5,9 +5,13 @@
 
 function scrollToElement(elementId) {
   const element = document.getElementById(elementId);
-
+  const body = document.body
   if (element) {
     element.scrollIntoView({ behavior: "smooth" });
+  }
+
+  if (body) {
+    body.classList.remove("navPanel-visible")
   }
 }
 

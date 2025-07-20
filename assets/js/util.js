@@ -26,7 +26,7 @@
           (typeof href !== "undefined" && href != ""
             ? ' href="' + href + '"'
             : "") +
-          `onclick="scrollToElement('${$this.attr("id")}')"` +
+          `onclick="scrollToElement('${target}')"` +
           ">" +
           '<span class="indent-' +
           indent +

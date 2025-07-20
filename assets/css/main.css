@@ -3774,7 +3774,7 @@ body {
 					text-decoration: none;
 					outline: 0;
 					border: 0;
-					display: none;
+					/* display: none; */
 				}
 
 					#titleBar .toggle:before {
